@@ -1,11 +1,18 @@
 {% extends 'shop.html' %}
 
 {% block title %}
-    КУРТКА
+    {{title}}
 {% endblock %}
 
 {% block content %}
     <div class="row">
-        <h1 class="col-12 col-md-6 display-2">Куртка самого Короля! Последняя дюжина!</h1>
+        <h2 class="col-12 col-md-6 display-2">Куртка самого Короля! Последняя дюжина!</h1>
+        <ul>
+            {% for item in jacket %}
+                {% for color in item.color %}
+                    <li>{{ color }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}

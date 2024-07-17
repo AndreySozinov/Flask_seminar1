@@ -1,11 +1,18 @@
 {% extends 'shop.html' %}
 
 {% block title %}
-    ОДЕЖДА
+    {{title}}
 {% endblock %}
 
 {% block content %}
     <div class="row">
-        <h1 class="col-12 col-md-6 display-2">Одежда на любой вкус за любые деньги!</h1>
+        <h2 class="col-12 col-md-6 display-2">Одежда на любой вкус за любые деньги!</h2>
+        <ul>
+            {% for item in clothes %}
+                {% for size in item.size %}
+                    <li>{{ size }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}

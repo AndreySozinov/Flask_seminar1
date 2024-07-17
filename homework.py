@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -10,7 +11,7 @@ def shop_page():
 
 @app.route('/clothes/')
 def page_clothes():
-    _clothes = [{'size':['small clothes', 'medium clothes', 'large clothes']}]
+    _clothes = [{'size': ['small clothes', 'medium clothes', 'large clothes']}]
     context = {'title': 'Одежда',
                'clothes': _clothes}
     return render_template('clothes.html', **context)
